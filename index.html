@@ -2,127 +2,57 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>PROA ERP</title>
 
-  <!-- Redirección Automática Inmediata sin Iframe (Evita Bloqueos 401 de Google) -->
+  <!-- 1. REDIRECCIÓN INMEDIATA POR NAVEGADOR: La URL cambia al instante -->
   <meta http-equiv="refresh" content="0; url=https://script.google.com/a/macros/progan.co/s/AKfycbz1pDZaAFto8dTvljB5rauutISQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec">
 
-  <!-- PWA & Mobile Meta Tags para Guardar Icono en el Celular -->
-  <meta name="theme-color" content="#0F172A">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="PROA ERP">
-  <meta name="application-name" content="PROA ERP">
-
-  <!-- Iconos para Pantalla de Inicio (iPhone y Android) -->
+  <!-- 2. ICONOS PARA QUE EL CELULAR GUARDE EL LOGO DE PROA ERP -->
   <link rel="apple-touch-icon" sizes="180x180" href="icon-512.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-
-  <!-- Web App Manifest -->
   <link rel="manifest" href="manifest.json">
 
+  <!-- 3. REDIRECCIÓN INMEDIATA POR JAVASCRIPT: Cambia la URL en la barra de direcciones -->
+  <script>
+    var TARGET_URL = "https://script.google.com/a/macros/progan.co/s/AKfycbz1pDZaAFto8dTvljB5rauutISQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec";
+    window.location.href = TARGET_URL;
+  </script>
+
   <style>
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
-      padding: 0;
-    }
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+      padding: 20px;
       background-color: #0F172A;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #FFFFFF;
+      font-family: sans-serif;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100vh;
     }
-    .splash-card {
-      text-align: center;
-      padding: 24px;
-      max-width: 360px;
-    }
-    .splash-logo {
-      width: 130px;
-      height: 130px;
-      border-radius: 26px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
       margin-bottom: 20px;
-      animation: pulseLogo 2s infinite ease-in-out;
     }
-    .splash-title {
-      color: #FFFFFF;
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
-    }
-    .splash-sub {
-      color: #94A3B8;
-      font-size: 0.88rem;
-      margin-bottom: 24px;
-      line-height: 1.4;
-    }
-    .spinner {
-      width: 36px;
-      height: 36px;
-      border: 3.5px solid rgba(255,255,255,0.12);
-      border-top-color: #F59E0B;
-      border-radius: 50%;
-      margin: 0 auto 20px auto;
-      animation: spin 0.8s linear infinite;
-    }
-    .btn-direct {
+    a {
+      color: #38BDF8;
+      margin-top: 15px;
       display: inline-block;
-      padding: 12px 24px;
-      background: #10B981;
-      color: #FFFFFF;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      box-shadow: 0 4px 15px rgba(16,185,129,0.3);
-      transition: all 0.2s;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    @keyframes pulseLogo {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.04); }
     }
   </style>
-
-  <script>
-    // URL OFICIAL EXACTA DE TU GOOGLE APPS SCRIPT
-    var GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/a/macros/progan.co/s/AKfycbz1pDZaAFto8dTvljB5rauutISQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec";
-
-    // Registrar Service Worker para permitir la instalación en el móvil
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('sw.js').catch(function(e) {});
-      });
-    }
-
-    // Redirección inmediata a nivel superior (NUNCA en iframe)
-    window.location.replace(GOOGLE_APPS_SCRIPT_URL);
-  </script>
 </head>
 <body>
-
-  <div class="splash-card">
-    <img src="icon-512.png" alt="PROA ERP" class="splash-logo">
-    <div class="splash-title">PROA ERP</div>
-    <div class="splash-sub">Redirigiendo al sistema seguro...</div>
-    <div class="spinner"></div>
-    <noscript>
-      <a href="https://script.google.com/a/macros/progan.co/s/AKfycbz1pDZaAFto8dTvljB5rauutISQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec" class="btn-direct">Entrar al Sistema</a>
-    </noscript>
-  </div>
-
+  <img src="icon-512.png" alt="PROA ERP">
+  <h2>Redirigiendo a PROA ERP...</h2>
+  <p>Cambiando a la página oficial del sistema...</p>
+  <a href="https://script.google.com/a/macros/progan.co/s/AKfycbz1pDZaAFto8dTvljB5rauutISQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec">
+    Haz clic aquí si no te redirige automáticamente
+  </a>
 </body>
 </html>
