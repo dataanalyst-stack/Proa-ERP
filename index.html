@@ -5,28 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>PROA ERP</title>
 
-  <!-- 1. REDIRECCIÓN INMEDIATA POR NAVEGADOR: La URL cambia al instante -->
+  <!-- Redirección Inmediata: Cambia la URL al instante -->
   <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbz1pDZaAFto8dTvljB5rauutlSQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec">
 
-  <!-- 2. ICONOS PARA QUE EL CELULAR GUARDE EL LOGO DE PROA ERP -->
+  <!-- Iconos para Pantalla de Inicio (iPhone y Android) -->
   <link rel="apple-touch-icon" sizes="180x180" href="icon-512.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
   <link rel="manifest" href="manifest.json">
 
-  <!-- 3. REDIRECCIÓN INMEDIATA POR JAVASCRIPT: Cambia la URL en la barra de direcciones -->
+  <!-- Redirección por JavaScript -->
   <script>
-    var TARGET_URL = "https://script.google.com/macros/s/AKfycbz1pDZaAFto8dTvljB5rauutlSQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec";
-    window.location.href = TARGET_URL;
+    window.location.replace("https://script.google.com/macros/s/AKfycbz1pDZaAFto8dTvljB5rauutlSQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec");
   </script>
 
   <style>
     body {
       margin: 0;
-      padding: 20px;
+      padding: 24px;
       background-color: #0F172A;
       color: #FFFFFF;
-      font-family: sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -39,20 +38,30 @@
       height: 120px;
       border-radius: 24px;
       margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    h2 {
+      margin: 0 0 8px 0;
+      font-size: 1.35rem;
+    }
+    p {
+      color: #94A3B8;
+      font-size: 0.85rem;
+      margin: 0 0 20px 0;
     }
     a {
       color: #38BDF8;
-      margin-top: 15px;
-      display: inline-block;
+      text-decoration: underline;
+      font-size: 0.88rem;
     }
   </style>
 </head>
 <body>
   <img src="icon-512.png" alt="PROA ERP">
   <h2>Redirigiendo a PROA ERP...</h2>
-  <p>Cambiando a la página oficial del sistema...</p>
+  <p>Cambiando a la página oficial de la aplicación...</p>
   <a href="https://script.google.com/macros/s/AKfycbz1pDZaAFto8dTvljB5rauutlSQHGz3AwhiKCryT-iroxcs6XAomC04j9BRgbYHD4J9jA/exec">
-    Haz clic aquí si no te redirige automáticamente
+    Toca aquí si no redirige automáticamente
   </a>
 </body>
 </html>
